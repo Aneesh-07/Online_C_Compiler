@@ -1,0 +1,9 @@
+# render.yaml
+
+services:
+  - name: web
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -c gunicorn.py app:app
+    healthCheckPath: /
+    github:
+      autoDeploy: true
