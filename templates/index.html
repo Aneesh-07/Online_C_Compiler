@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online C Compiler</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+</head> 
+<body>
+        <header class="main_heading">
+            Welcome to the Online C Compiler
+        </header>
+    <main class="main">
+        <p>Hello there! I'm Aneesh Tripathi, and this is my personal project: the Online C Compiler.</p>
+        <p>If you're curious about coding in C or you're looking to quickly compile and test your C programs, you're in the right place.</p>
+        <p>As part of my journey to learn Flask, HTML, and CSS, I've developed this web-based compiler to make the process of writing and running C code more convenient.</p>
+        <p>Feel free to explore the compiler page where you can write your C code, submit it for compilation, and see the results in real time.</p>
+        <p>Thank you for checking out my project, and I hope you find it helpful and informative!</p>
+    </main>
+ 
+    <form action="{{ url_for('compiler') }}" method="GET">
+      <button class="Start_button" >Get Started!</button>
+</form>
+    
+    <footer>
+        <p>&copy; 2023 ANEESH TRIPATHI Learning Flask, HTML, and CSS.</p>
+    </footer>
+</body>
+</html>

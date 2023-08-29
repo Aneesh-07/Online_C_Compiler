@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online C Compiler</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/compiler.css') }}">
+</head>
+<body>
+
+    <main class="main">
+        <h2>Compiler Page</h2>
+
+        <div class="compiler_container">
+            <form id="compilerForm" action="{{ url_for('compiler') }}" method="POST">
+                <div class="editor">
+                    <div class="line-numbers"></div>
+                    <textarea name="code" id="codeTextarea" rows="40" cols="120" placeholder="Enter your C code here" value = "hfoishfo">{{code}}</textarea>
+                    <textarea id="outputTextArea"  rows="40" cols="120" placeholder="///Your output here."> {{output}}</textarea><br>
+                </div>
+                
+                
+                <h2>Input Area</h2>
+                <input type="checkbox" name="check" id="GFG" 
+                    value="1" {{check}}>Enable input<br> 
+                
+                
+                <div class="input">
+                    <textarea name="input" id="inputTextarea" rows="5" cols="150" placeholder="Enter input for your program">{{input}}</textarea>
+                </div>
+                <button type="submit" id="compileButton">Compile</button>
+            </form>
+        </div>
+    </main>
+
+    
+</body>
+</html>
