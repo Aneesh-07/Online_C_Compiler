@@ -33,9 +33,9 @@ def run(code,inp,chk):
     
     if check==0:
         if chk == '1':
-            r = subprocess.run(['./new.exe'],input=inp.encode(),stdout=PIPE)
+            r = subprocess.run(['./new'],input=inp.encode(),stdout=PIPE)
         else:
-            r = subprocess.run(['./new.exe'],stdout=PIPE)
+            r = subprocess.run(['./new'],stdout=PIPE)
         
         return r.stdout.decode("utf-8")
     return s.stderr.decode("utf-8")
