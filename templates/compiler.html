@@ -13,10 +13,27 @@
             <form id="compilerForm" action="{{ url_for('compiler') }}" method="POST">
                 <div class="editor">
                     <div class="line-numbers"></div>
-                    <textarea name="code" id="codeTextarea" rows="40" cols="120" placeholder="Enter your C code here" value = "hfoishfo">{{code}}</textarea>
+                    <textarea name="code" id="codeTextarea" rows="40" cols="120" placeholder="Enter your C code here" value = "hfoishfo">// C program to print right half pyramid pattern of number
+                        #include <stdio.h>
+                        
+                        int main()
+                        {
+                            int rows = 5;
+                        
+                            // first loop for printing rows
+                            for (int i = 0; i < rows; i++) {
+                        
+                                // second loop for printing number in each rows
+                                for (int j = 0; j <= i; j++) {
+                                    printf("%d ", j + 1);
+                                }
+                                printf("\n");
+                            }
+                            return 0;
+                        }
+                        {{code}}</textarea>
                     <textarea id="outputTextArea"  rows="40" cols="120" placeholder="///Your output here."> {{output}}</textarea><br>
                 </div>
-                
                 
                 <h2>Input Area</h2>
                 <input type="checkbox" name="check" id="GFG" 
